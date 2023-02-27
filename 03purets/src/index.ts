@@ -10,7 +10,8 @@
 
 //This is the same as the constructor
 class User {
-  private _couseCount = 1;
+  //   private _courseCount = 1;
+  protected _courseCount = 1;
 
   private readonly city: string = "Jabuka";
   constructor(public email: string, public name: string) {}
@@ -24,11 +25,18 @@ class User {
   }
 
   get getCouseCount(): number {
-    return this._couseCount;
+    return this._courseCount;
   }
 
   set setCouseCount(courseNumber: number) {
-    this._couseCount = courseNumber;
+    this._courseCount = courseNumber;
+  }
+}
+
+class subUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this._courseCount = 4;
   }
 }
 

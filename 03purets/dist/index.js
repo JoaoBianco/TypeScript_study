@@ -13,7 +13,8 @@ class User {
     constructor(email, name) {
         this.email = email;
         this.name = name;
-        this._couseCount = 1;
+        //   private _courseCount = 1;
+        this._courseCount = 1;
         this.city = "Jabuka";
     }
     deleteToken() {
@@ -23,10 +24,19 @@ class User {
         return `apple${this.email}`;
     }
     get getCouseCount() {
-        return this._couseCount;
+        return this._courseCount;
     }
     set setCouseCount(courseNumber) {
-        this._couseCount = courseNumber;
+        this._courseCount = courseNumber;
+    }
+}
+class subUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
     }
 }
 const hi = new User("email@example.com", "example");
