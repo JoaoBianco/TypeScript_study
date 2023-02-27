@@ -1,1 +1,10 @@
-console.log("ts is here still");
+class User {
+  email: string;
+  name: string;
+  constructor(email: string, name: string) {
+    this.email = email;
+    this.name = name;
+  }
+}
+
+const hi = new User("email@example.com", "example");
