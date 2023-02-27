@@ -14,3 +14,14 @@ function identityFour(val) {
     return val;
 }
 identityFour({ brand: "t", type: 2 });
+//Normal function
+function getSearchProducts(products) {
+    //do some database operations
+    const myIndex = 3;
+    return products[myIndex];
+}
+const getMoreSearchProducts = (products) => {
+    //do some database operations
+    const myIndex = 2;
+    return products[myIndex];
+};
